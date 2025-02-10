@@ -125,7 +125,6 @@ const QueHago = () => {
               Utilizando mi formación en ciencias sociales y en data science,
               optimizo los contenidos según los datos proporcionados por las
               herramientas de cada red social.{" "}
-              <span className="weight600">crear significado.</span>
             </p>
           </div>
           <a
