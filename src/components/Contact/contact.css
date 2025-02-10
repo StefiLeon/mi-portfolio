@@ -1,0 +1,81 @@
+/* Contact section */
+.contact-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, var(--violet), var(--lighter-pink));
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Button */
+.contact-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: var(--violet);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: var(--violet);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Circles Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.contact-section::before,
+.contact-section::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+.contact-section::before {
+  top: 20%;
+  left: 10%;
+}
+
+.contact-section::after {
+  top: 50%;
+  right: 10%;
+  animation-delay: 3s;
+}

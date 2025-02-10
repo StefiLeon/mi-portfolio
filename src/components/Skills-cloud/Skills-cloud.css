@@ -1,0 +1,74 @@
+/* Container */
+.skills-cloud {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--lighter-blue);
+
+  h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.h3-background {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.skills-cloud.in-view .h3-background {
+  background-color: var(--darker-pink);
+  color: white;
+}
+
+.cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Skills */
+.skill {
+  padding: 0.5rem 1rem;
+  background-color: var(--violet);
+  color: white;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.skill:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+
+.skill:nth-child(3n) {
+  animation-delay: 1s;
+}
+
+/* Hover */
+.skill:hover {
+  background-color: var(--lighter-pink);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

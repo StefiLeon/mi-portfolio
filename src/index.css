@@ -1,0 +1,36 @@
+:root {
+  --violet: #cdb4db;
+  --lighter-pink: #ffc8dd;
+  --darker-pink: #ffafcc;
+  --lighter-blue: #bde0fe;
+  --darker-blue: #a2d2ff;
+  --font-mosk: "Mosk", sans-serif;
+  --font-mosk-400: "Mosk Normal 400", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-mosk), sans-serif;
+  color: var(--darker-pink);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+  overflow-y: auto;
+  padding: 4rem 2rem;
+  min-height: auto;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: none;
+  }
+  section {
+    height: auto;
+  }
+}

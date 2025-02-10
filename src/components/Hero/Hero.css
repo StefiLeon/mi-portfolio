@@ -1,0 +1,259 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  background: linear-gradient(90deg, transparent 70%, var(--lighter-blue) 70%);
+  position: relative;
+  padding: 4rem 2rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 50%,
+      var(--lighter-blue) 50%
+    );
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .hero-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    color: black;
+    z-index: 1;
+  }
+
+  .hero-left {
+    flex: 0 0 35%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .hero-right {
+    flex: 0 0 40%;
+    text-align: left;
+    color: black;
+    padding-left: 10rem;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+      font-variant: small-caps;
+    }
+
+    p {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-weight: 800;
+      animation: fadeIn 3s ease-in-out;
+    }
+  }
+}
+
+/* Outline span */
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+  text-stroke: 2px black;
+}
+
+/* Hover effects */
+
+.highlight-name {
+  position: relative;
+  cursor: pointer;
+}
+
+.highlight-name::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 110%;
+  transform: translateX(-50%);
+  width: 8rem;
+  height: 8rem;
+  background-image: url("https://futbolfemeninoargentino.com.ar/wp-content/uploads/2025/02/stefi-1-scaled.avif");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.highlight-name:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10rem);
+}
+
+.highlight-social {
+  position: relative;
+  cursor: pointer;
+}
+
+.highlight-social::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-20%);
+  width: 5rem;
+  height: 5rem;
+  background-image: url("https://www.iconpacks.net/icons/2/free-instagram-like-icon-3507-thumb.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.highlight-social:hover::after {
+  opacity: 1;
+  transform: translateX(-20%) translateY(-7rem);
+}
+
+.highlight-problem {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.highlight-problem .gsap-swipe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(100%, -50%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease;
+}
+
+.highlight-problem:hover .gsap-swipe {
+  opacity: 1 !important;
+}
+
+.highlight-problem:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateX(-370px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.maskSwipe {
+  animation: swipe 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Breakpoints */
+@media (max-width: 576px) {
+  .hero {
+    padding: 1.5rem 0;
+  }
+
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+
+  .hero-image {
+    max-width: 300px;
+  }
+
+  .hero-right {
+    margin-top: 1.5rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    order: 2;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .hero-right {
+    margin-top: 2rem;
+    order: 1;
+    padding-left: 0 !important;
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+  .highlight-name::after,
+  .highlight-social::after,
+  .highlight-problem::after {
+    display: none;
+  }
+}
+
+@media (max-width: 568px) {
+  .hero {
+    padding-top: 15rem;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      font-size: 2rem !important;
+    }
+  }
+}
