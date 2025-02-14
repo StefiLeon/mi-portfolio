@@ -106,7 +106,7 @@ const QueHago = () => {
             rel="noreferrer"
           >
             <InstagramCard
-              profilePic="https://p77-sign-va.tiktokcdn.com/tos-maliva-avt-0068/eb998724cd6b7d95e42f6fbee9e83231~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=48009&refresh_token=fae3a5af9b61613ddfaf30dd33e4fdcb&x-expires=1739372400&x-signature=wSMqstVqBwBBHym3Lsf%2BM%2F0fDmE%3D&shp=a5d48078&shcp=81f88b70"
+              profilePic="https://pbs.twimg.com/profile_images/1604558315471753219/esZSkuhP_400x400.jpg"
               username="AFAseleccion"
               image="https://futbolfemeninoargentino.com.ar/wp-content/uploads/2025/02/ig-teenangels-1-png.avif"
               caption="💻✨"
@@ -133,7 +133,7 @@ const QueHago = () => {
             rel="noreferrer"
           >
             <InstagramCard
-              profilePic="https://p77-sign-va.tiktokcdn.com/tos-maliva-avt-0068/eb998724cd6b7d95e42f6fbee9e83231~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=48009&refresh_token=fae3a5af9b61613ddfaf30dd33e4fdcb&x-expires=1739372400&x-signature=wSMqstVqBwBBHym3Lsf%2BM%2F0fDmE%3D&shp=a5d48078&shcp=81f88b70"
+              profilePic="https://pbs.twimg.com/profile_images/1604558315471753219/esZSkuhP_400x400.jpg"
               username="AFAseleccion"
               image="https://futbolfemeninoargentino.com.ar/wp-content/uploads/2025/02/garnacho-png.avif"
               caption="💻✨"
